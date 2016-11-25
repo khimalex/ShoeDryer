@@ -10,6 +10,11 @@ using System.Windows.Input;
 
 namespace ShoeDryer
 {
+	public interface IAsyncCommand : ICommand
+	{
+		Task ExecuteAsync(object parameter);
+	}
+
 	public abstract class AsyncCommandBase : IAsyncCommand
 	{
 		public abstract bool CanExecute(object parameter);
@@ -233,8 +238,4 @@ namespace ShoeDryer
 
 	}
 
-	public interface IAsyncCommand : ICommand
-	{
-		Task ExecuteAsync(object parameter);
-	}
 }

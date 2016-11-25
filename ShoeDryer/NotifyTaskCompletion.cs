@@ -29,6 +29,7 @@ namespace ShoeDryer
 			}
 			catch (Exception e)
 			{
+				//throw;
 			}
 			var propertyChanged = PropertyChanged;
 			if (propertyChanged == null)

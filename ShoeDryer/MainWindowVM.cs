@@ -54,7 +54,8 @@ namespace ShoeDryer
 				{
 					random.Next(Int32.MinValue, Int32.MaxValue);
 				}
-				Cancel?.Token.ThrowIfCancellationRequested();
+				//Possibly it not need throwing. Because we exited from while-loop and task wil be finished.
+				//Cancel?.Token.ThrowIfCancellationRequested();
 			}, Cancel.Token);
 		}
 
