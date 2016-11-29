@@ -17,6 +17,9 @@
         MinWidth="225"
         ResizeMode="NoResize"
         Title="ShoeDryer">
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding StopCommand}" Key="Esc"/>
+    </Window.InputBindings>
     <Window.DataContext>
         <local:MainWindowVM/>
     </Window.DataContext>
@@ -34,9 +37,7 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Grid.Column="0" Margin="3"
                Content="Количество потоков:"/>
-        <TextBox Grid.Row="0" 
-                 Grid.Column="1" 
-                 Margin="3"
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="3"
                  Text="{Binding Threads, UpdateSourceTrigger=PropertyChanged}"
                  IsEnabled="{Binding StartCommand.Execution.IsCompleted}">
             <TextBox.InputBindings>
