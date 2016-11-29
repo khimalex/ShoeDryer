@@ -61,7 +61,7 @@ namespace ShoeDryer
 					if (token.IsCancellationRequested)
 						token.ThrowIfCancellationRequested();
 				}
-			});
+			}, token);
 		}
 
 		#region INotifyPropertyChanged
